@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Player Class &mdash; Carbon Emission Task - documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Pages" href="pages.html" />
+    <link rel="prev" title="Subsession Class" href="Subsession_fields.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Carbon Emission Task
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup_in_otree.html">Set up the CET in oTree</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cet_data_csv.html">CET Data (csv file)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Constants.html">Constants</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Subsession_fields.html">Subsession Class</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Player Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#fields">Fields</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#carbon">Carbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#car-miles">Car Miles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bonus">Bonus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#decided">Decided</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choice">Choice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choice-practice">Choice Practice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#total-emission">Total Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chosen-emission">Chosen Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saved-emission">Saved Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-bot">Is Bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-dropout">Is Dropout</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#is-finished">Is Finished</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#payoff-per-round">Payoff per Round</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#current-question">Current Question</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-total-emission">Set Total Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-chosen-emission">Set Chosen Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-saved-emission">Set Saved Emission</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-is-bot">Set is Bot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-payoff-per-round">Set Payoff per Round</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-payoff">Set Payoff</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pages.html">Pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="templates.html">Templates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="export.html">Export</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Carbon Emission Task</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Player Class</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/Player_fields.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="player-class">
+<h1>Player Class<a class="headerlink" href="#player-class" title="Permalink to this headline">¶</a></h1>
+<p>Here’s an overview of all fields and functions in the Player class:</p>
+<div class="section" id="fields">
+<h2>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="carbon">
+<span id="carbon-ref"></span><h3>Carbon<a class="headerlink" href="#carbon" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code> field specifies the  carbon value in lbs for each round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="car-miles">
+<span id="car-miles-ref"></span><h3>Car Miles<a class="headerlink" href="#car-miles" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> field specifies the equivalent of the carbon value in miles driven in a standard car.</p></li>
+<li><p>This value serves as a real-life example for the players to understand the carbon footprint of the decision.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="bonus">
+<span id="bonus-ref"></span><h3>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.bonus</span></code> is a Currency field that specifies the monetary compensation a player receives,
+if the environmentally unfriendly Option A is picked.</p></li>
+</ul>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code>, <code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> and <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code> value are initialised for all rounds before the start
+of the experiment. See <a class="reference internal" href="Subsession_fields.html#creating-session-ref"><span class="std std-ref">creating_session()</span></a></p>
+</div>
+<div class="section" id="decided">
+<h3>Decided<a class="headerlink" href="#decided" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.decided</span></code> is a Boolean field that states whether a player has made an autonomous decision or not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: The player has decided on his/her own.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: A timeout happened.</p></li>
+<li><p>A player has a <code class="docutils literal notranslate"><span class="pre">decided</span></code> value in each round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="choice">
+<span id="choice-ref"></span><h3>Choice<a class="headerlink" href="#choice" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.choice</span></code> specifies the choice of the player for each round.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: Option B: The player decides to forfeit the bonus (Environmentally friendly decision).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: Option A: The player decides to take the bonus (Environmentally unfriendly decision).</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="choice-practice">
+<h3>Choice Practice<a class="headerlink" href="#choice-practice" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.choice_practice</span></code> is needed to produce an error if player tries to click through practice rounds.</p></li>
+<li><p>This field serves no other purpose and can be disregarded in the <a class="reference internal" href="export.html#export-ref"><span class="std std-ref">Export</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="total-emission">
+<h3>Total Emission<a class="headerlink" href="#total-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.total_emission</span></code> is the sum of the <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code> values over all rounds the player has progressed so far.</p></li>
+<li><p>This value increases every time a player progresses to a new round.</p></li>
+<li><p>This field can be split into two sub_fields: <code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> and <code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="chosen-emission">
+<h3>Chosen Emission<a class="headerlink" href="#chosen-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> is the sum of all carbon values if Option A was clicked.</p></li>
+<li><p>This value increases everytime the player chooses Option A.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="saved-emission">
+<h3>Saved Emission<a class="headerlink" href="#saved-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code> is the sum of all carbon values if Option B was clicked.</p></li>
+<li><p>This value increases everytime the player chooses Option B.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-bot">
+<h3>Is Bot<a class="headerlink" href="#is-bot" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_bot</span></code> is a Boolean field that states if the player is seen as a Bot or not.</p></li>
+<li><p>A player is regarded as a bot if the amount of autonomous decisions falls below the <a class="reference internal" href="Constants.html#bot-criteria-ref"><span class="std std-ref">Bot Criteria</span></a>.</p></li>
+<li><p>The bot status of a player can vary from round to round depending on the player’s percentage of autonomous decisions.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-dropout">
+<span id="is-dropout-ref"></span><h3>Is Dropout<a class="headerlink" href="#is-dropout" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> is a Boolean field that states if the player is considered a dropout.</p></li>
+<li><p>A dropout player is a player that mathematically cannot become “human” again.</p></li>
+<li><p><strong>Example:</strong>
+The CET has a total of 40 rounds. Let’s assume the Bot Criteria is 0.75 so the player
+has to decide autonomously in 75% of all rounds. Hence, the player must make a decision in 30 of the total 40 rounds.
+So the player can miss a total of 10 rounds and can still avoid being considered a bot if he makes a decision in
+the remaining 30 rounds. However, once the player misses a total of 11 rounds, then the player can mathematically
+not become “human” again. As soon as this happens the <code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> field turns <code class="docutils literal notranslate"><span class="pre">True</span></code> and the player is
+considered a dropout.</p></li>
+<li><p>If the player is considered a dropout, then the <a class="reference internal" href="pages.html#timeout-ref"><span class="std std-ref">Timeout</span></a> for every remaining page is set to 0 seconds.
+Thus, the dropout player is automatically progressed through each round until the CET is finished.
+This drastically reduces the total experiment time, since experimenters don’t have to wait on dropout players.
+This is espacially important because every player (also dropouts) have to finish the CET so the
+<code class="docutils literal notranslate"><span class="pre">send_payment_mail()</span></code> function is triggered. See <a class="reference internal" href="Subsession_fields.html#mail-call-ref"><span class="std std-ref">When is send_payment_mail() called?</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-finished">
+<h3>Is Finished<a class="headerlink" href="#is-finished" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_finished</span></code> is a Boolean field that states if the player has finished the CET or not.</p></li>
+<li><p>A player is considered finished when the “Next” button on the Results page is pressed. See <a class="reference internal" href="pages.html#results"><span class="std std-ref">Results Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="payoff-per-round">
+<h3>Payoff per Round<a class="headerlink" href="#payoff-per-round" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> field contains the player’s (hypothetical) payoff for each round.</p></li>
+<li><p>If the player chooses environmentally-friendly Option B, the payoff is 0.</p></li>
+<li><p>If the player chooses environmentally-unfriendly Option A, the payoff is <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> is used as a helper field and does NOT define the actual <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> field.
+The actual payoff is calculated in <a class="reference internal" href="#set-payoff-ref"><span class="std std-ref">Set Payoff</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="current-question">
+<h3>Current Question<a class="headerlink" href="#current-question" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">current_question</span></code> is used to help initialize <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code>, <code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> and <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code>.</p></li>
+<li><p>This function is called in <a class="reference internal" href="Subsession_fields.html#creating-session-ref"><span class="std std-ref">creating_session()</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-total-emission">
+<h3>Set Total Emission<a class="headerlink" href="#set-total-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_total_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.total_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="pages.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-chosen-emission">
+<h3>Set Chosen Emission<a class="headerlink" href="#set-chosen-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_chosen_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="pages.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-saved-emission">
+<h3>Set Saved Emission<a class="headerlink" href="#set-saved-emission" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_saved_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="pages.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-is-bot">
+<h3>Set is Bot<a class="headerlink" href="#set-is-bot" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_is_bot</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.is_bot</span></code> and the <code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="pages.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-payoff-per-round">
+<h3>Set Payoff per Round<a class="headerlink" href="#set-payoff-per-round" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_payoffs_per_round</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="pages.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-payoff">
+<span id="set-payoff-ref"></span><h3>Set Payoff<a class="headerlink" href="#set-payoff" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_payoff</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> field.</p></li>
+<li><p>The payoff is a built-in player field that does not have to be initialised and is used to determine the player’s payoff.</p></li>
+<li><p>This function is dependent on the <a class="reference internal" href="Constants.html#random-payoff"><span class="std std-ref">Random Payoff</span></a> constant.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">True</span></code> then the <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> = <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> in the paying round and 0 in every other round.</p></li>
+<li><p>Else <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> = <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> for every round.</p></li>
+<li><p>This function is called in every round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="pages.html" class="btn btn-neutral float-right" title="Pages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Subsession_fields.html" class="btn btn-neutral float-left" title="Subsession Class" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Noel Strahm.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
