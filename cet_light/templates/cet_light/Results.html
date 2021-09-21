@@ -1,0 +1,45 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Results
+{#    <p> Round {{ subsession.round_number }} of {{ Constants.num_rounds }} </p>#}
+{% endblock %}
+
+{% block styles %}
+{# Timer not displayed #}
+<style>
+.otree-timer {
+        display: none;
+}
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+
+    {% if Constants.random_payoff %}
+        The random payoff round was: {{ subsession.paying_round }}.
+        <br/>
+        In this round you chose Option {% if choice_in_paying_round == 1 %}
+                                            A and took the bonus.
+                                       {% else %}
+                                            B and forfeited the bonus.
+                                       {% endif %}
+        <br/>
+        The random payoff is therefore: {{ payoff_in_paying_round}}.
+
+    {% else %}
+        Your total payoff is {{ participant.payoff }}.
+
+    {% endif %}
+
+    <br/>
+    <br/>
+
+    {% next_button %}
+
+{% endblock %}
+
+

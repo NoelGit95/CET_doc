@@ -1,0 +1,59 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p> Practice</p>
+{% endblock %}
+
+{% block styles %}
+
+{# Timer not displayed #}
+<style>
+.otree-timer {
+        display: none;
+}
+</style>
+
+{##}
+{#    Option to display timer#}
+{#<script>#}
+{#    $(function () {#}
+{#        $('.otree-timer__time-left').on('update.countdown', function (event) {#}
+{#            if (event.offset.totalSeconds === 10) {#}
+{#                $('.otree-timer').show();#}
+{#            }#}
+{#        });#}
+{#    });#}
+{#</script>#}
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="card bg-light m-3">
+    <div class="card-body">
+            <h3>Instructions</h3><br/>
+
+            <p>You will now be presented with three practice decisions to get acquainted with the carbon emission task.
+            Afterwards, the actual study rounds will directly begin. In each round, click on the button of the option you prefer, then click "Next".
+            Starting on the next page, you will have 20 seconds to make a choice, afterwards the choice will automatically be set
+            to Option B and the next round will be presented. During the practice rounds, you will be alerted when only 10 seconds
+            are left. This information will only be given during the practice rounds.</p><br/>
+
+    </div>
+</div>
+
+<div class="container ">
+    <div class="row ">
+        <div class="col-md-12" >
+            <div style="text-align: center">
+              {% next_button %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+

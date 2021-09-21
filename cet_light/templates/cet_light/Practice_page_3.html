@@ -1,0 +1,162 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    <p> Practice Round 3 of 3 </p>
+{% endblock %}
+
+{% block styles %}
+
+<style>
+
+table.roundedCorners {
+  width:40%;
+  white-space: nowrap;
+  background-color: #f8f9fa;
+  border-collapse: separate;
+  border: 1px solid DarkGrey;
+  border-radius: 10px;
+  border-spacing: 0px 0px;
+  }
+
+@media screen and (max-width: 560px) {
+  table.roundedCorners {
+  float: none;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  }
+
+}
+
+h4 {
+  column-span: all;
+  text-align: center
+}
+
+
+.otree-form-errors {
+  visibility: hidden;
+  display: none;
+}
+
+.otree-timer {
+        display: none;
+}
+
+</style>
+
+<script>
+    $(function () {
+        $('.otree-timer__time-left').on('update.countdown', function (event) {
+            if (event.offset.totalSeconds === 10) {
+                $('.otree-timer').show();
+            }
+        });
+    });
+</script>
+
+{% endblock %}
+
+{% block content %}
+
+{% if form.errors  %}
+<div class="alert alert-danger" role="alert">
+    <p>Please choose one of the required fields.</p>
+</div>
+{% endif %}
+
+    <h5>Please choose one of the following options:</h5> <br/><br/>
+
+
+<!-- OPTION A CONTAINER -->
+<div class="container" >
+
+    <table class="roundedCorners" style="float: left;">
+
+        <tr>
+            <th style="padding-left: 1.25rem; padding-right:1.25rem; padding-top: 1.25rem" colspan="2"> <h4>Option A</h4> </th>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-right: 1.25rem;" align="center" width="40%"> Carbon Emission </td>
+            <td style="padding-right: 1.25rem;" align="center" width="40%"> Bonus</td>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-right: 1.25rem;" align="center">
+                <strong> {{ practice3_carbon }} lbs. CO<sub>2</sub></strong><br/>
+            </td>
+            <td style="padding-right: 1.25rem;" align="center"> <strong>{{ practice3_bonus|c }}</strong></td>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-right: 1.25rem;padding-bottom: 1.25rem;" align="center">
+                <strong>(~ {{ practice3_carmiles }} car miles)</strong>
+            </td>
+        </tr>
+
+        <tr>
+             <td style="border-top: 1px solid DarkGrey; padding-top: 1.25rem; padding-bottom: 1.25rem;" colspan="2" align="center">
+                 <input type="radio" id="Option A" name="choice_practice" value="1"> {{ formfield_errors 'choice_practice' }}
+             </td>
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+
+<!-- OPTION B CONTAINER -->
+<div class="container" >
+
+    <table class="roundedCorners" style=" float: right">
+
+        <tr>
+            <th style="padding-left: 1.25rem; padding-right:1.25rem; padding-top: 1.25rem" colspan="2">
+                <h4>Option B</h4>
+            </th>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-right:1.25rem" align="center" width="40%"> Carbon Emission </td>
+            <td style="padding-right: 1.25rem;padding-right:1.25rem" align="center" width="40%"> Bonus</td>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-right:1.25rem" align="center">
+                <strong> 0 lbs. CO<sub>2</sub></strong><br/>
+            </td>
+            <td style="padding-right: 1.25rem;" align="center"> <strong>{{ 0|c }}</strong></td>
+        </tr>
+
+        <tr>
+            <td style="padding-left: 1.25rem;padding-bottom: 1.25rem;padding-right:1.25rem" align="center">
+                <strong>(0 car miles)</strong>
+            </td>
+        </tr>
+
+        <tr>
+             <td style="border-top: 1px solid DarkGrey; padding-top: 1.25rem; padding-bottom: 1.25rem; " colspan="2" align="center">
+                 <input type="radio" id="Option B" name="choice_practice" value="0"> {{ formfield_errors 'choice_practice' }}
+             </td>
+        </tr>
+
+    </table>
+
+
+
+
+<!-- Nedded for space between containers and next button -->
+<div class="space" style="padding-bottom: 220px">
+    <br>
+</div>
+
+<!-- Next Button -->
+<div style="text-align: center;">
+    {% next_button %}
+</div>
+
+
+{% endblock %}
