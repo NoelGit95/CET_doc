@@ -20,7 +20,7 @@ Instruction Page
 -------------------
 The following instructions are presented to the player:
 
-.. image:: _static/Instructions.png
+.. image:: _static/Instructions.jpg
       :align: center
       :height: 262 px
       :width: 700 px
@@ -34,7 +34,7 @@ There is a Timeout of 120 seconds on this page.
 Practice Pages
 ---------------
 
-.. image:: _static/practice1.png
+.. image:: _static/practice1.jpg
       :align: center
       :width: 700 px
 
@@ -82,7 +82,7 @@ The timeout for practice pages is set to 20 seconds.
 Experiment Page
 ----------------
 
-.. image:: _static/experiment_page.png
+.. image:: _static/experiment_page.jpg
       :align: center
       :width: 700 px
 
@@ -180,13 +180,13 @@ From left to right: ``random_payoff = True`` and player chose Option A; ``random
 
 |ran_a| |ran_b| |no_ran|
 
-.. |ran_a| image:: _static/result_ran_a.png
+.. |ran_a| image:: _static/result_ran_a.jpg
    :height: 132 px
 
-.. |ran_b| image:: _static/result_ran_b.png
+.. |ran_b| image:: _static/result_ran_b.jpg
    :height: 132 px
 
-.. |no_ran| image:: _static/result.png
+.. |no_ran| image:: _static/result.jpg
    :height: 132 px
 
 
@@ -238,7 +238,7 @@ Contents of send_payment_mail():
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This is an example of a generated email:
 
-.. image:: _static/email_update.png
+.. image:: _static/email_update.jpg
       :align: center
       :height: 326 px
       :width: 700 px
@@ -246,7 +246,7 @@ This is an example of a generated email:
 The link directs you to the donation form, where the carbon-emission certificate purchase can be made.
 The donation form looks like this:
 
-.. image:: _static/spendeformular_update.png
+.. image:: _static/spendeformular_update.jpg
       :align: center
       :height: 335 px
       :width: 1000 px

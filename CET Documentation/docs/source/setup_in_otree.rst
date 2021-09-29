@@ -10,7 +10,7 @@ This is how you import the Carbon Emission Task into your oTree framework.
 
 Step 1: Download the CET
 ----------------------------
-Download the CET folder from `Github <https://github.com/NoelGit95/CET_doc>`_
+Download the CET folder from `Github/NoelGit95/CET_doc <https://github.com/NoelGit95/CET_doc>`_.
 
 Step 2: Add the CET to your oTree Project
 ---------------------------------------------

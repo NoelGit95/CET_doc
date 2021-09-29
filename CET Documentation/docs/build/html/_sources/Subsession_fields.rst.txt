@@ -78,6 +78,7 @@ Send Payment Mail
 --------------------
 
 The ``send_payment_mail()`` function is used to automate carbon-emission certificate purchases for experiments with real-carbon externalities, such as the CET.
+For more information see `ACO Documentation <https://aco-doc.readthedocs.io/en/latest/>`_.
 
 Requirements
 ~~~~~~~~~~~~~~~~
