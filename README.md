@@ -1,4 +1,4 @@
-# CET_guests
+# CET_doc
 A Repo for the basic version of the Carbon Emission Task. 
 
 ## About the Carbon Emission Task
