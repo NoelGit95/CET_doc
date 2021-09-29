@@ -78,3 +78,15 @@ Add the following line to the ``requirements.txt`` file:
 
     requests~=2.25.0 #Or higher version if this one is outdated.
 
+
+Step 5: Start the CET
+-------------------------------------
+All Done. You can start the cet app like any other otree app by going to your oTree project directory and
+starting the oTree devserver.
+
+.. code-block:: python
+
+    otree devserer
+
+
+Click Next for further explanations of the cet_light folder's contents.
