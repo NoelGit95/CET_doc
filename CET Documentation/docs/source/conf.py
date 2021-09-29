@@ -38,7 +38,7 @@ release = '-'
 
 extensions = [
     "sphinx_rtd_theme",
-    "rst2pdf.pdfbuilder",
+    #"rst2pdf.pdfbuilder",
     'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.napoleon',
