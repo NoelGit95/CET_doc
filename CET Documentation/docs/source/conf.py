@@ -42,7 +42,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
     'sphinx.ext.napoleon',
-    'sphinxcontrib_django',
+    #'sphinxcontrib_django',
 ]
 
 
