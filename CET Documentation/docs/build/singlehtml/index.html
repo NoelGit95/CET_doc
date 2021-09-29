@@ -1,0 +1,1018 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Carbon Emission Task - documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Carbon Emission Task
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-setup_in_otree">Set up the CET in oTree</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#step-1-download-the-cet">Step 1: Download the CET</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#step-2-add-the-cet-to-your-otree-project">Step 2: Add the CET to your oTree Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#step-3-change-session-configurations-in-settings-py">Step 3: Change session configurations in settings.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-cet_data_csv">CET Data (csv file)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-carmiles_calculator">Car Distance Calculator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-Constants">Constants</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#random-payoff">Random Payoff</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#random-saved-emission">Random Saved Emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#bot-criteria">Bot Criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#num-rounds">Num Rounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-Subsession_fields">Subsession Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#creating-session">creating_session()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#paying-round">Paying Round</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#sum-saved-emission">Sum saved Emission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#all-players-finished">All Players Finished</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#helpful-prints">Helpful prints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#send-payment-mail">Send Payment Mail</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-Player_fields">Player Class</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#fields">Fields</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-pages">Pages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#instruction-page">Instruction Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#practice-pages">Practice Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#experiment-page">Experiment Page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#results-page">Results Page</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-templates">Templates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#block-styles">Block Styles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#block-content">Block Content</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-export">Export</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Carbon Emission Task</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Carbon Emission Task - documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="carbon-emission-task-documentation">
+<h1>Carbon Emission Task Documentation<a class="headerlink" href="#carbon-emission-task-documentation" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="_images/logo.jpg"><img alt="_images/logo.jpg" class="align-center" src="_images/logo.jpg" style="width: 600px;" /></a>
+<div class="section" id="about">
+<h2>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The Carbon Emission Task (CET) as a new paradigm grounded in experimental economics to assess actual pro-environmental behavior</p></li>
+<li><p>The CET can be used in laboratory, online, or classroom studies.</p></li>
+<li><p>Participants face repeated tradeoffs between financial bonus opportunities paired with real carbon emissions and foregoing such opportunities while staying carbon-neutral.</p></li>
+</ul>
+</div>
+<div class="section" id="support">
+<h2>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h2>
+<p>For help, please contact <a class="reference external" href="mailto:someone&#37;&#52;&#48;iop&#46;unibe&#46;ch">someone<span>&#64;</span>iop<span>&#46;</span>unibe<span>&#46;</span>ch</a></p>
+</div>
+<div class="section" id="contents">
+<h2>Contents:<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<span id="document-setup_in_otree"></span><div class="section" id="set-up-the-cet-in-otree">
+<span id="setup-in-otree"></span><h3>Set up the CET in oTree<a class="headerlink" href="#set-up-the-cet-in-otree" title="Permalink to this headline">¶</a></h3>
+<p>This is how you import the Carbon Emission Task into your oTree framework.</p>
+<div class="section" id="step-1-download-the-cet">
+<h4>Step 1: Download the CET<a class="headerlink" href="#step-1-download-the-cet" title="Permalink to this headline">¶</a></h4>
+<p>Download the CET from Github: (Insert Download Link here)</p>
+</div>
+<div class="section" id="step-2-add-the-cet-to-your-otree-project">
+<h4>Step 2: Add the CET to your oTree Project<a class="headerlink" href="#step-2-add-the-cet-to-your-otree-project" title="Permalink to this headline">¶</a></h4>
+<p>Copy the CET folder into your oTree project directory like this:</p>
+<dl>
+<dt>— Your_oTree_Project</dt><dd><div class="line-block">
+<div class="line">- otree_app1</div>
+<div class="line">- otree_app2</div>
+<div class="line">..</div>
+<div class="line">- CET</div>
+<div class="line">- manage.py</div>
+<div class="line">- settings.py</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="step-3-change-session-configurations-in-settings-py">
+<h4>Step 3: Change session configurations in settings.py<a class="headerlink" href="#step-3-change-session-configurations-in-settings-py" title="Permalink to this headline">¶</a></h4>
+<p>Include the CET app in your settings.py file. To do this append the following code in the
+SESSION_CONFIGS list.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">dict</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;cet&#39;</span><span class="p">,</span>
+    <span class="n">display_name</span><span class="o">=</span><span class="s2">&quot;CET Light Version&quot;</span><span class="p">,</span>
+    <span class="n">num_demo_participants</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span>
+    <span class="n">app_sequence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;cet&#39;</span><span class="p">],</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="index.html#csv-file"><span class="std std-ref">CET Data (csv file)</span></a> provides the values for a player’s bonus. The currency used is the Great British Pound. If you want
+to use a different currency, the data in the cet_data file has to be adjusted accordingly. If no changes are made to
+the cet_data file the currency parameters have to be specified as such:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># e.g. EUR, GBP, CNY, JPY</span>
+<span class="n">REAL_WORLD_CURRENCY_CODE</span> <span class="o">=</span> <span class="s1">&#39;GBP&#39;</span>
+<span class="n">USE_POINTS</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<span id="document-cet_data_csv"></span><div class="section" id="cet-data-csv-file">
+<span id="csv-file"></span><h3>CET Data (csv file)<a class="headerlink" href="#cet-data-csv-file" title="Permalink to this headline">¶</a></h3>
+<p>The cet_data.csv file provides the player’s <a class="reference internal" href="index.html#carbon-ref"><span class="std std-ref">Carbon</span></a>, <a class="reference internal" href="index.html#car-miles-ref"><span class="std std-ref">Car Miles</span></a> and <a class="reference internal" href="index.html#bonus-ref"><span class="std std-ref">Bonus</span></a> values.
+There are 20 unique combinations of carbon, car miles and bonus values in the file. Those rows are repeated once,
+yielding a total of 40 data rows. Each data row supplies data for a CET round, hence the number of data rows is
+equal to the number of rounds in the CET (40).</p>
+<p>Experimenters can extend the csv file with more data rows, which in turn increases the number of rounds in the CET.
+Furthermore, the data values can be modified, if experimenters want to explore different framework conditions
+for the CET. For example a different currency other than GBP, different carbon values, higher or lower bonuses
+or different analogies other than car miles to show the carbon footprint of each decision.</p>
+<p>If experimenters want to modify the carbon and car mile values they are encouraged to use the <a class="reference internal" href="index.html#cet-calculator"><span class="std std-ref">Car Distance Calculator</span></a>
+within the project folder.</p>
+</div>
+<span id="document-carmiles_calculator"></span><div class="section" id="car-distance-calculator">
+<span id="cet-calculator"></span><h3>Car Distance Calculator<a class="headerlink" href="#car-distance-calculator" title="Permalink to this headline">¶</a></h3>
+<p>The car_distance_calculator.xlsx file provides a usable calculator that determines how far an average UK car
+can drive, given a certain amount of CO2 emission. The calculator can be used if experimenters decide to
+choose a different weight unit other than pound to display the <a class="reference internal" href="index.html#carbon-ref"><span class="std std-ref">Carbon</span></a> values
+or use kilometers instead of miles to display the <a class="reference internal" href="index.html#car-miles-ref"><span class="std std-ref">Car Miles</span></a> values.</p>
+<p>The calculator provides a C02 emission to car miles / kilometers conversion for the following weight units:
+Milligrams (mg), Grams (g), Kilograms (kg), Tons (t), Pounds (lbs), Ounzes (oz) and Stones (st).
+The weight of the CO2 emission is then converted to miles and kilometers driven in an average UK car
+using petrol as fuel.</p>
+<p>A more detailed description on how the calculator works is provided within the car_distance_calculator.xlsx file.</p>
+<p>All carbon and car mile values must be changed in the <a class="reference internal" href="index.html#csv-file"><span class="std std-ref">CET Data (csv file)</span></a> in order to change the values during
+the experiment.</p>
+<p>Some further modifications to the CET can be made in the <a class="reference internal" href="index.html#constants"><span class="std std-ref">Constants</span></a> class of the models.py file.</p>
+</div>
+<span id="document-Constants"></span><div class="section" id="constants">
+<span id="id1"></span><h3>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h3>
+<p>The following Constants can be set in the Constants class:</p>
+<div class="section" id="random-payoff">
+<span id="id2"></span><h4>Random Payoff<a class="headerlink" href="#random-payoff" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random_payoff</span></code> is used to define your preferred payoff calculation for the <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> field.</p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">True</span></code> a player’s payoff is only calculated in the <code class="docutils literal notranslate"><span class="pre">paying_round</span></code>.
+The payoff in all other rounds is 0. See <a class="reference internal" href="index.html#paying-round-ref"><span class="std std-ref">Paying Round</span></a></p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">False</span></code> a player’s payoff is calculated in all rounds.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="random-saved-emission">
+<span id="random-emission"></span><h4>Random Saved Emission<a class="headerlink" href="#random-saved-emission" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random_saved_emission</span></code> is used to define how the <code class="docutils literal notranslate"><span class="pre">Subsession.sum_saved_emission</span></code> field is calculated. See <a class="reference internal" href="index.html#sum-saved-emission-ref"><span class="std std-ref">Sum saved Emission</span></a></p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">True</span></code> the sum is calculated by adding each player’s saved emission in the <code class="docutils literal notranslate"><span class="pre">paying_round</span></code>.</p></li>
+<li><p>If set to <code class="docutils literal notranslate"><span class="pre">False</span></code> the saved emission for all rounds is added.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="bot-criteria">
+<span id="bot-criteria-ref"></span><h4>Bot Criteria<a class="headerlink" href="#bot-criteria" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Bot_criteria</span></code> is used to define the criteria as to when a player is seen as a bot.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Bot_criteria</span></code> must be a value between 0-1 that represents the percentage of autonomous decisions a player has to make in order to be seen as human.</p></li>
+<li><p>Example: The definition below means a player must decide autonomously (No timeout happened) in at least 75% of all rounds. Otherwise the player is regarded as a bot.</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Bot_criteria</span> <span class="o">=</span> <span class="mf">0.75</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="num-rounds">
+<h4>Num Rounds<a class="headerlink" href="#num-rounds" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>This is an oTree specific variable that defines the number of rounds of the CET.</p></li>
+<li><p>The number of rounds is defined as the length of the <a class="reference internal" href="index.html#csv-file"><span class="std std-ref">CET Data (csv file)</span></a> that contains the carbon data. If no changes
+are made this equals to 40 rounds.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<span id="document-Subsession_fields"></span><div class="section" id="subsession-class">
+<span id="subsession-fields"></span><h3>Subsession Class<a class="headerlink" href="#subsession-class" title="Permalink to this headline">¶</a></h3>
+<p>Here’s an overview of all fields and functions in the Subsession class:</p>
+<div class="section" id="creating-session">
+<span id="creating-session-ref"></span><h4>creating_session()<a class="headerlink" href="#creating-session" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">paying_round</span></code> is set as a random round between 1 and <code class="docutils literal notranslate"><span class="pre">num_rounds</span></code>.</p></li>
+<li><p>The order of questions is randomized for each player.</p></li>
+<li><p>The player’s <a class="reference internal" href="index.html#carbon-ref"><span class="std std-ref">Carbon</span></a>, <a class="reference internal" href="index.html#car-miles-ref"><span class="std std-ref">Car Miles</span></a> and <a class="reference internal" href="index.html#bonus-ref"><span class="std std-ref">Bonus</span></a> fields are initialized for all rounds.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="paying-round">
+<span id="paying-round-ref"></span><h4>Paying Round<a class="headerlink" href="#paying-round" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">paying_round</span></code> is the round where the player’s payoff is calculated if <code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">True</span></code>. See <a class="reference internal" href="index.html#random-payoff"><span class="std std-ref">Random Payoff</span></a></p></li>
+<li><p>A player’s saved emission in the <code class="docutils literal notranslate"><span class="pre">paying_round</span></code> is added to the <code class="docutils literal notranslate"><span class="pre">sum_saved_emission</span></code> field if <code class="docutils literal notranslate"><span class="pre">random_saved_emission</span> <span class="pre">=</span> <span class="pre">True</span></code>. See <a class="reference internal" href="index.html#random-emission"><span class="std std-ref">Random Saved Emission</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="sum-saved-emission">
+<span id="sum-saved-emission-ref"></span><h4>Sum saved Emission<a class="headerlink" href="#sum-saved-emission" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="field">
+<h5>Field<a class="headerlink" href="#field" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">sum_saved_emission</span></code> field is the sum of the <code class="docutils literal notranslate"><span class="pre">saved_emission</span></code> player field for all players.</p></li>
+<li><p>The sum is either calculated across the <code class="docutils literal notranslate"><span class="pre">paying_round</span></code> or across all rounds depending on the <a class="reference internal" href="index.html#random-emission"><span class="std std-ref">Random Saved Emission</span></a> field.</p></li>
+<li><p>The field is used as an input in the <a class="reference internal" href="#mail-ref"><span class="std std-ref">Send Payment Mail</span></a> function.</p></li>
+<li><p>Excludes all players that ar seen as bots.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="function">
+<h5>Function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">set_sum_saved_emission()</span></code> function sets the <code class="docutils literal notranslate"><span class="pre">sum_saved_emission</span></code> field.</p></li>
+<li><p>Checks if a player is a bot. See <a class="reference internal" href="index.html#bot-criteria-ref"><span class="std std-ref">Bot Criteria</span></a></p></li>
+<li><p>If a player is not a bot then the total <code class="docutils literal notranslate"><span class="pre">saved_emission</span></code> of all players is added to the <code class="docutils literal notranslate"><span class="pre">sum_saved_emission</span></code>
+(Either across the paying round or all rounds).</p></li>
+<li><p>A player has to finish all rounds of the CET, so that the correct data is available. Therefore, this function is only called in the last round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="all-players-finished">
+<h4>All Players Finished<a class="headerlink" href="#all-players-finished" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id1">
+<h5>Field<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">all_players_finished</span></code> is a Boolean field that turns <code class="docutils literal notranslate"><span class="pre">True</span></code> once all players have finished the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h5>Function<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_all_players_finished()</span></code> calculates how many players in total have finished the CET (<code class="docutils literal notranslate"><span class="pre">sum_finished</span></code>).</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">sum_finished</span></code> = Number of participants then the <code class="docutils literal notranslate"><span class="pre">all_players_finished</span></code> field turns <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>This function is only called once (for each player): When the player hits the “Next” button on the
+<a class="reference internal" href="index.html#results"><span class="std std-ref">Results Page</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="helpful-prints">
+<h4>Helpful prints<a class="headerlink" href="#helpful-prints" title="Permalink to this headline">¶</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">helpful_prints()</span></code> function prints helpful information about the current state of many player and subsession fields to the terminal.</p></li>
+<li><p>The function can be extended at will and be used for bug fixing purposes, if a new field is added.</p></li>
+<li><p>The function is called in every round of the CET and when a player finishes the CET.</p></li>
+<li><p>The function is only useful if the number of participants is small.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="send-payment-mail">
+<span id="mail-ref"></span><h4>Send Payment Mail<a class="headerlink" href="#send-payment-mail" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">send_payment_mail()</span></code> function is used to automate carbon-emission certificate purchases for experiments with real-carbon externalities, such as the CET.</p>
+<div class="section" id="requirements">
+<h5>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The modules requests and smtplib have to be imported at the top of the models.py file.</p></li>
+<li><p>A valid account from an SMTP service provider is needed. The credentials of the account have to be specified at
+the top of the function.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="parameters">
+<h5>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">weight_to_donate</span></code>: A float value used to pass the amount of carbon emission that is saved by the experimental participants. The <a class="reference internal" href="#sum-saved-emission-ref"><span class="std std-ref">Sum saved Emission</span></a> is used for this.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">unit</span></code>: A string value that defines the unit of the saved carbon emission. The following values are accepted: <code class="docutils literal notranslate"><span class="pre">[&quot;mg&quot;,</span> <span class="pre">&quot;g&quot;,</span> <span class="pre">&quot;kg&quot;,</span> <span class="pre">&quot;t&quot;,</span> <span class="pre">&quot;oz&quot;,</span> <span class="pre">&quot;lbs&quot;,</span> <span class="pre">&quot;st&quot;]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">experiment_name</span></code>: A string value that specifies the name of the experiment (e.g. “Carbon Emission Task”)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payment_e_mail_name</span></code>: A string that specifies the name of the person or team that receives the mail</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">payment_e_mail_to</span></code>: A list containing the mail addresses of all recipients . If the mail is only to be sent to one address then a single string can be passed to the function.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="how-it-works-basic">
+<h5>How it works (basic)<a class="headerlink" href="#how-it-works-basic" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">weight_to_donate</span></code> value is converted to metric tons. The conversion is based on the <code class="docutils literal notranslate"><span class="pre">unit</span></code> value.</p></li>
+<li><p>The current CO2 price per ton for emission certificates is fetched from a price endpoint that is provided by
+<a class="reference external" href="https://www.compensators.org/">Compensators</a>.</p></li>
+<li><p>The price of the carbon-emission certificate is calculated.</p></li>
+<li><p>A mail is sent to all addresses within the <code class="docutils literal notranslate"><span class="pre">payment_e_mail_to</span></code> list.
+The mail includes the total weight of carbon-emission saved,
+the current price per ton for carbon-emission certificates, as well as the link to Compensators
+<a class="reference external" href="https://www.spendenformular-direkt.org/forms/6944d11a-60d9-48a2-803f-b4b0c7797cb9">donation form</a>
+with the correct price to make the carbon-emission certificate purchase.
+These contents can be changed at will.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="when-is-send-payment-mail-called">
+<span id="mail-call-ref"></span><h5>When is send_payment_mail() called?<a class="headerlink" href="#when-is-send-payment-mail-called" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The function is called when all players have finished the CET. For an example see <a class="reference internal" href="index.html#results"><span class="std std-ref">Results Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+<span id="document-Player_fields"></span><div class="section" id="player-class">
+<h3>Player Class<a class="headerlink" href="#player-class" title="Permalink to this headline">¶</a></h3>
+<p>Here’s an overview of all fields and functions in the Player class:</p>
+<div class="section" id="fields">
+<h4>Fields<a class="headerlink" href="#fields" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="carbon">
+<span id="carbon-ref"></span><h5>Carbon<a class="headerlink" href="#carbon" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code> field specifies the  carbon value in lbs for each round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="car-miles">
+<span id="car-miles-ref"></span><h5>Car Miles<a class="headerlink" href="#car-miles" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> field specifies the equivalent of the carbon value in miles driven in a standard car.</p></li>
+<li><p>This value serves as a real-life example for the players to understand the carbon footprint of the decision.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="bonus">
+<span id="bonus-ref"></span><h5>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.bonus</span></code> is a Currency field that specifies the monetary compensation a player receives,
+if the environmentally unfriendly Option A is picked.</p></li>
+</ul>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code>, <code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> and <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code> value are initialised for all rounds before the start
+of the experiment. See <a class="reference internal" href="index.html#creating-session-ref"><span class="std std-ref">creating_session()</span></a></p>
+</div>
+<div class="section" id="decided">
+<h5>Decided<a class="headerlink" href="#decided" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.decided</span></code> is a Boolean field that states whether a player has made an autonomous decision or not.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">True</span></code>: The player has decided on his/her own.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">False</span></code>: A timeout happened.</p></li>
+<li><p>A player has a <code class="docutils literal notranslate"><span class="pre">decided</span></code> value in each round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="choice">
+<span id="choice-ref"></span><h5>Choice<a class="headerlink" href="#choice" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.choice</span></code> specifies the choice of the player for each round.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span></code>: Option B: The player decides to forfeit the bonus (Environmentally friendly decision).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code>: Option A: The player decides to take the bonus (Environmentally unfriendly decision).</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="choice-practice">
+<h5>Choice Practice<a class="headerlink" href="#choice-practice" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.choice_practice</span></code> is needed to produce an error if player tries to click through practice rounds.</p></li>
+<li><p>This field serves no other purpose and can be disregarded in the <a class="reference internal" href="index.html#export-ref"><span class="std std-ref">Export</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="total-emission">
+<h5>Total Emission<a class="headerlink" href="#total-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.total_emission</span></code> is the sum of the <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code> values over all rounds the player has progressed so far.</p></li>
+<li><p>This value increases every time a player progresses to a new round.</p></li>
+<li><p>This field can be split into two sub_fields: <code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> and <code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="chosen-emission">
+<h5>Chosen Emission<a class="headerlink" href="#chosen-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> is the sum of all carbon values if Option A was clicked.</p></li>
+<li><p>This value increases everytime the player chooses Option A.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="saved-emission">
+<h5>Saved Emission<a class="headerlink" href="#saved-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code> is the sum of all carbon values if Option B was clicked.</p></li>
+<li><p>This value increases everytime the player chooses Option B.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-bot">
+<h5>Is Bot<a class="headerlink" href="#is-bot" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_bot</span></code> is a Boolean field that states if the player is seen as a Bot or not.</p></li>
+<li><p>A player is regarded as a bot if the amount of autonomous decisions falls below the <a class="reference internal" href="index.html#bot-criteria-ref"><span class="std std-ref">Bot Criteria</span></a>.</p></li>
+<li><p>The bot status of a player can vary from round to round depending on the player’s percentage of autonomous decisions.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-dropout">
+<span id="is-dropout-ref"></span><h5>Is Dropout<a class="headerlink" href="#is-dropout" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> is a Boolean field that states if the player is considered a dropout.</p></li>
+<li><p>A dropout player is a player that mathematically cannot become “human” again.</p></li>
+<li><p><strong>Example:</strong>
+The CET has a total of 40 rounds. Let’s assume the Bot Criteria is 0.75 so the player
+has to decide autonomously in 75% of all rounds. Hence, the player must make a decision in 30 of the total 40 rounds.
+So the player can miss a total of 10 rounds and can still avoid being considered a bot if he makes a decision in
+the remaining 30 rounds. However, once the player misses a total of 11 rounds, then the player can mathematically
+not become “human” again. As soon as this happens the <code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> field turns <code class="docutils literal notranslate"><span class="pre">True</span></code> and the player is
+considered a dropout.</p></li>
+<li><p>If the player is considered a dropout, then the <a class="reference internal" href="index.html#timeout-ref"><span class="std std-ref">Timeout</span></a> for every remaining page is set to 0 seconds.
+Thus, the dropout player is automatically progressed through each round until the CET is finished.
+This drastically reduces the total experiment time, since experimenters don’t have to wait on dropout players.
+This is espacially important because every player (also dropouts) have to finish the CET so the
+<code class="docutils literal notranslate"><span class="pre">send_payment_mail()</span></code> function is triggered. See <a class="reference internal" href="index.html#mail-call-ref"><span class="std std-ref">When is send_payment_mail() called?</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="is-finished">
+<h5>Is Finished<a class="headerlink" href="#is-finished" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">player.is_finished</span></code> is a Boolean field that states if the player has finished the CET or not.</p></li>
+<li><p>A player is considered finished when the “Next” button on the Results page is pressed. See <a class="reference internal" href="index.html#results"><span class="std std-ref">Results Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="payoff-per-round">
+<h5>Payoff per Round<a class="headerlink" href="#payoff-per-round" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> field contains the player’s (hypothetical) payoff for each round.</p></li>
+<li><p>If the player chooses environmentally-friendly Option B, the payoff is 0.</p></li>
+<li><p>If the player chooses environmentally-unfriendly Option A, the payoff is <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> is used as a helper field and does NOT define the actual <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> field.
+The actual payoff is calculated in <a class="reference internal" href="#set-payoff-ref"><span class="std std-ref">Set Payoff</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="functions">
+<h4>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="current-question">
+<h5>Current Question<a class="headerlink" href="#current-question" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">current_question</span></code> is used to help initialize <code class="docutils literal notranslate"><span class="pre">player.carbon</span></code>, <code class="docutils literal notranslate"><span class="pre">player.car_miles</span></code> and <code class="docutils literal notranslate"><span class="pre">player.bonus</span></code>.</p></li>
+<li><p>This function is called in <a class="reference internal" href="index.html#creating-session-ref"><span class="std std-ref">creating_session()</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-total-emission">
+<h5>Set Total Emission<a class="headerlink" href="#set-total-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_total_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.total_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-chosen-emission">
+<h5>Set Chosen Emission<a class="headerlink" href="#set-chosen-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_chosen_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.chosen_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-saved-emission">
+<h5>Set Saved Emission<a class="headerlink" href="#set-saved-emission" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_saved_emission</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.saved_emission</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-is-bot">
+<h5>Set is Bot<a class="headerlink" href="#set-is-bot" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_is_bot</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.is_bot</span></code> and the <code class="docutils literal notranslate"><span class="pre">player.is_dropout</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-payoff-per-round">
+<h5>Set Payoff per Round<a class="headerlink" href="#set-payoff-per-round" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_payoffs_per_round</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> field.</p></li>
+<li><p>This function is called in every round of the CET. See <a class="reference internal" href="index.html#exp-page"><span class="std std-ref">Experiment Page</span></a></p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="set-payoff">
+<span id="set-payoff-ref"></span><h5>Set Payoff<a class="headerlink" href="#set-payoff" title="Permalink to this headline">¶</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">set_payoff</span></code> sets the <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> field.</p></li>
+<li><p>The payoff is a built-in player field that does not have to be initialised and is used to determine the player’s payoff.</p></li>
+<li><p>This function is dependent on the <a class="reference internal" href="index.html#random-payoff"><span class="std std-ref">Random Payoff</span></a> constant.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">True</span></code> then the <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> = <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> in the paying round and 0 in every other round.</p></li>
+<li><p>Else <code class="docutils literal notranslate"><span class="pre">player.payoff</span></code> = <code class="docutils literal notranslate"><span class="pre">player.payoff_per_round</span></code> for every round.</p></li>
+<li><p>This function is called in every round of the CET.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+<span id="document-pages"></span><div class="section" id="pages">
+<span id="id1"></span><h3>Pages<a class="headerlink" href="#pages" title="Permalink to this headline">¶</a></h3>
+<p>Overview of all pages of the Carbon Emission Task</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Timeouts:</strong> There is a timeout on every page of the experiment to account for dropped out players.
+In case a player begins the experiment and leaves, the player is automatically progressed through the
+rest of the experiment.</p>
+</div>
+<div class="section" id="instruction-page">
+<h4>Instruction Page<a class="headerlink" href="#instruction-page" title="Permalink to this headline">¶</a></h4>
+<p>The following instructions are presented to the player:</p>
+<a class="reference internal image-reference" href="_images/Instructions.png"><img alt="_images/Instructions.png" class="align-center" src="_images/Instructions.png" style="width: 700px; height: 262px;" /></a>
+<div class="section" id="timeout">
+<h5>Timeout<a class="headerlink" href="#timeout" title="Permalink to this headline">¶</a></h5>
+<p>There is a Timeout of 120 seconds on this page.</p>
+</div>
+</div>
+<div class="section" id="practice-pages">
+<span id="practice-page-ref"></span><h4>Practice Pages<a class="headerlink" href="#practice-pages" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/practice1.png"><img alt="_images/practice1.png" class="align-center" src="_images/practice1.png" style="width: 700px;" /></a>
+<p>There is a total of three practice pages before the actual CET starts. The practice pages don’t visibly differ from
+the actual experiment pages and serve the sole purpose of familiarising the participants with the task.
+The following <code class="docutils literal notranslate"><span class="pre">carbon</span></code>, <code class="docutils literal notranslate"><span class="pre">car_miles</span></code>, <code class="docutils literal notranslate"><span class="pre">bonus</span></code> values are used in this order for the three practice pages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>0.23 lbs. CO2, 0.37 car miles, 0.2£</p></li>
+<li><p>4.46 lbs. CO2, 7.24 car miles, 0.6£</p></li>
+<li><p>19.85 lbs. CO2, 32.22 car miles, 1£</p></li>
+</ul>
+</div></blockquote>
+<p>These values can be changed in the following code block of the corresponding practice page class:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">vars_for_template</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">practice1_carbon</span><span class="o">=</span><span class="mf">0.23</span><span class="p">,</span>
+        <span class="n">practice1_carmiles</span><span class="o">=</span><span class="mf">0.37</span><span class="p">,</span>
+        <span class="n">practice1_bonus</span><span class="o">=</span><span class="mf">0.2</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>These values should match an existing combination of carbon, car miles and bonus values provided in the <a class="reference internal" href="index.html#csv-file"><span class="std std-ref">CET Data (csv file)</span></a>.
+No data is logged for the practice pages.</p>
+<div class="section" id="forms">
+<h5>Forms:<a class="headerlink" href="#forms" title="Permalink to this headline">¶</a></h5>
+<p>The following forms are used for the practice page class:
+The <code class="docutils literal notranslate"><span class="pre">choice_practice</span></code> field is needed to produce an error if a player clicks the “Next” Button before choosing an Option.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Experiment_page</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="n">form_model</span> <span class="o">=</span> <span class="s1">&#39;player&#39;</span>
+    <span class="n">form_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;choice_practice&#39;</span><span class="p">]</span>  <span class="c1"># == player.choice_practice</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h5>Timeout:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h5>
+<p>The timeout for practice pages is set to 20 seconds.</p>
+</div>
+</div>
+<div class="section" id="experiment-page">
+<span id="exp-page"></span><h4>Experiment Page<a class="headerlink" href="#experiment-page" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="_images/experiment_page.png"><img alt="_images/experiment_page.png" class="align-center" src="_images/experiment_page.png" style="width: 700px;" /></a>
+<p>The experiment page class is responsible for the experimental rounds of the CET.</p>
+<div class="section" id="id3">
+<h5>Forms<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h5>
+<p>The following forms are used for the experiment page class:
+If a player presses either Option A or B the choice is automatically logged in the <code class="docutils literal notranslate"><span class="pre">player.choice</span></code> field.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Experiment_page</span><span class="p">(</span><span class="n">Page</span><span class="p">):</span>
+    <span class="n">form_model</span> <span class="o">=</span> <span class="s1">&#39;player&#39;</span>
+    <span class="n">form_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;choice&#39;</span><span class="p">]</span>  <span class="c1"># == player.choice</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timeout-ref">
+<span id="id4"></span><h5>Timeout<a class="headerlink" href="#timeout-ref" title="Permalink to this headline">¶</a></h5>
+<p>In contrast to the Practice Pages’ timeout, the timeout for experiment pages is set dynamically.
+Before the timeout is set, it is checked whether or not the player has dropped out of the experiment. See <a class="reference internal" href="index.html#is-dropout-ref"><span class="std std-ref">Is Dropout</span></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">player.is_dropout</span> <span class="pre">=</span> <span class="pre">True</span></code>, the player has dropped out and the timeout is set to 0. All subsequent pages
+are submitted instantly and the player is automatically progressed through the rest of the experiment.</p></li>
+<li><p>Else the timeout is set to 20 seconds.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="before-next-page">
+<h5>Before_next_page()<a class="headerlink" href="#before-next-page" title="Permalink to this headline">¶</a></h5>
+<p>The code below is executed once a player hits the “Next” button of a given round. The order of the code below is
+very important because some functions depend on results that are calculated in previous functions. This order
+must not be changed unless you absolutely know what you are doing.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">before_next_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Timeout check</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">timeout_happened</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">decided</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">choice</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">decided</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1">#Payoff functions:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_payoff_per_round</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_payoff</span><span class="p">()</span>
+
+    <span class="c1">#Emission functions:</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_chosen_emission</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_total_emission</span><span class="p">()</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_saved_emission</span><span class="p">()</span>
+
+    <span class="c1">#Bot check</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">set_is_bot</span><span class="p">()</span>
+
+    <span class="c1">#Last round check</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">round_number</span> <span class="o">==</span> <span class="n">Constants</span><span class="o">.</span><span class="n">num_rounds</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">set_sum_saved_emission</span><span class="p">()</span>
+
+    <span class="c1"># Helpful prints</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">helpful_prints</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl>
+<dt><strong>Sequence of events (basic):</strong></dt><dd><div class="line-block">
+<div class="line">1. Timeout check</div>
+<div class="line-block">
+<div class="line">- If a timeout happened the <code class="docutils literal notranslate"><span class="pre">player.decided</span></code> field is set to <code class="docutils literal notranslate"><span class="pre">False</span></code> and <code class="docutils literal notranslate"><span class="pre">player.choice</span></code> is set to 0 (Option B).</div>
+<div class="line">- Else the <code class="docutils literal notranslate"><span class="pre">player.decided</span></code> field is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</div>
+</div>
+<div class="line">2. Payoff functions</div>
+<div class="line-block">
+<div class="line">- <code class="docutils literal notranslate"><span class="pre">set_payoff()</span></code> depends on <code class="docutils literal notranslate"><span class="pre">set_payoff_per_round()</span></code>.</div>
+</div>
+<div class="line">3. The emission functions are called.</div>
+<div class="line-block">
+<div class="line">- <code class="docutils literal notranslate"><span class="pre">set_chosen_emission()</span></code> and <code class="docutils literal notranslate"><span class="pre">set_saved_emission()</span></code> depend on the <code class="docutils literal notranslate"><span class="pre">player.choice</span></code> field that is set in step 1.</div>
+<div class="line">- <code class="docutils literal notranslate"><span class="pre">set_saved_emssion()</span></code> depends on <code class="docutils literal notranslate"><span class="pre">set_total_emission</span></code> and <code class="docutils literal notranslate"><span class="pre">set_chosen_emission()</span></code>.</div>
+</div>
+<div class="line">4. Bot check</div>
+<div class="line-block">
+<div class="line">- <code class="docutils literal notranslate"><span class="pre">set_is_bot()</span></code> is called and evaluates whether the player is a bot and/or a dropout.</div>
+<div class="line">- This function depends on the <code class="docutils literal notranslate"><span class="pre">player.decided</span></code> field that is set in step 1.</div>
+</div>
+<div class="line">5. Last round check</div>
+<div class="line-block">
+<div class="line">- If a player is in the last round of the CET, <code class="docutils literal notranslate"><span class="pre">set_sum_saved_emission()</span></code> is called.</div>
+<div class="line">- This function depends on <code class="docutils literal notranslate"><span class="pre">player.choice</span></code> (step 1), <code class="docutils literal notranslate"><span class="pre">set_saved_emision()</span></code> (step 3) and <code class="docutils literal notranslate"><span class="pre">set_is_bot()</span></code> (step 4).</div>
+</div>
+<div class="line">6. Helpful prints</div>
+<div class="line-block">
+<div class="line">- The helpful print functions is called and the state of most player and subsession fields are printed to the terminal.</div>
+<div class="line">- This function depends on most of the above steps.</div>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="results-page">
+<span id="results"></span><h4>Results Page<a class="headerlink" href="#results-page" title="Permalink to this headline">¶</a></h4>
+<p>The results page is displayed after the player has finished all rounds of the CET. The pages looks different
+depending on the <a class="reference internal" href="index.html#random-payoff"><span class="std std-ref">Random Payoff</span></a> constant and the Player’s <a class="reference internal" href="index.html#choice-ref"><span class="std std-ref">Choice</span></a> in the paying round.
+From left to right: <code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">True</span></code> and player chose Option A; <code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">True</span></code> and player chose Option B;
+<code class="docutils literal notranslate"><span class="pre">random_payoff</span> <span class="pre">=</span> <span class="pre">False</span></code> so the total payoff is shown.</p>
+<p><a class="reference internal" href="_images/result_ran_a.png"><img alt="ran_a" src="_images/result_ran_a.png" style="height: 132px;" /></a> <a class="reference internal" href="_images/result_ran_b.png"><img alt="ran_b" src="_images/result_ran_b.png" style="height: 132px;" /></a> <a class="reference internal" href="_images/result.png"><img alt="no_ran" src="_images/result.png" style="height: 132px;" /></a></p>
+<div class="section" id="id5">
+<h5>Timeout<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h5>
+<dl class="simple">
+<dt>The timeout logic works the same way as in the experiment pages.</dt><dd><ul class="simple">
+<li><p>If a player has dropped out: Timeout = 0 seconds</p></li>
+<li><p>Else: Timeout = 60 seconds</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h5>Before_next_page()<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<p>This code is executed once the player hits the “Next” button of the results page. The code below is used to send
+the mail for carbon-emission certificate purchases.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">before_next_page</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1">#Is Finished fields and functions</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">is_finished</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">set_all_players_finished</span><span class="p">()</span>
+
+    <span class="c1"># Helpful prints</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">helpful_prints</span><span class="p">()</span>
+
+    <span class="c1"># All finished check and send mail</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">all_players_finished</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">send_payment_mail</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">subsession</span><span class="o">.</span><span class="n">sum_saved_emission</span><span class="p">,</span>
+                                          <span class="s2">&quot;lbs&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;Carbon Emission Task&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+                                          <span class="s2">&quot;john.doe@cet.com&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Sequence of events:</strong></dt><dd><ol class="arabic simple">
+<li><p>Once a player hits the “Next” button the <code class="docutils literal notranslate"><span class="pre">is_finished</span></code> field of the player is set to <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">set_all_players_finished()</span></code> function checks if every player has finished the CET.</p></li>
+<li><p>Helpful information is printed to the terminal (including the number of players that have finished the CET).</p></li>
+<li><p>If all players have finished the CET, the <code class="docutils literal notranslate"><span class="pre">send_payment_mail()</span></code> function is called.</p></li>
+</ol>
+</dd>
+<dt><strong>Mail parameters:</strong></dt><dd><ul class="simple">
+<li><p>The <a class="reference internal" href="index.html#sum-saved-emission-ref"><span class="std std-ref">Sum saved Emission</span></a> field is the total weight of CO2 emission that was saved by participants.</p></li>
+<li><p>The unit of the weight is lbs.</p></li>
+<li><p>The name of the experiment is Carbon Emission Task.</p></li>
+<li><p>The name of the recipient is John Doe.</p></li>
+<li><p>the recipient’s email address is <a class="reference external" href="mailto:john&#46;doe&#37;&#52;&#48;cet&#46;com">john<span>&#46;</span>doe<span>&#64;</span>cet<span>&#46;</span>com</a>. (Multiple addresses have to be specified in a list
+e.g. [“<a class="reference external" href="mailto:john&#46;doe&#37;&#52;&#48;cet&#46;com">john<span>&#46;</span>doe<span>&#64;</span>cet<span>&#46;</span>com</a>”, “<a class="reference external" href="mailto:jane&#46;doe&#37;&#52;&#48;cet&#46;com">jane<span>&#46;</span>doe<span>&#64;</span>cet<span>&#46;</span>com</a>”].</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="contents-of-send-payment-mail">
+<h5>Contents of send_payment_mail():<a class="headerlink" href="#contents-of-send-payment-mail" title="Permalink to this headline">¶</a></h5>
+<p>This is an example of a generated email:</p>
+<a class="reference internal image-reference" href="_images/email_update.png"><img alt="_images/email_update.png" class="align-center" src="_images/email_update.png" style="width: 700px; height: 326px;" /></a>
+<p>The link directs you to the donation form, where the carbon-emission certificate purchase can be made.
+The donation form looks like this:</p>
+<a class="reference internal image-reference" href="_images/spendeformular_update.png"><img alt="_images/spendeformular_update.png" class="align-center" src="_images/spendeformular_update.png" style="width: 1000px; height: 335px;" /></a>
+</div>
+</div>
+</div>
+<span id="document-templates"></span><div class="section" id="templates">
+<span id="templates-ref"></span><h3>Templates<a class="headerlink" href="#templates" title="Permalink to this headline">¶</a></h3>
+<p>Overview of the general structure of all html templates for the CET.</p>
+<div class="section" id="block-styles">
+<h4>Block Styles<a class="headerlink" href="#block-styles" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">styles</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">...</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>In this section you can define graphical options for the elements displayed in <a class="reference internal" href="#block-content-ref"><span class="std std-ref">Block Content</span></a>.</p>
+<div class="section" id="error-message">
+<h5>Error message<a class="headerlink" href="#error-message" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">otree-form-errors</span> <span class="p">{</span>
+<span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+<span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">visibility:</span> <span class="pre">hidden</span></code> hides a possible error message, but the element will still take up space on the page.
+In contrast, <code class="docutils literal notranslate"><span class="pre">display:</span> <span class="pre">none</span></code> completely removes the element.
+It is possible to show a different error message should participants fail to choose
+one of the necessary options to advance (e.g., one of the two options in the CET). The message can be modified
+within the <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">content</span> <span class="pre">%}</span></code> inside this block:</p>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">form.errors</span>  <span class="cp">%}</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;alert alert-danger&quot; role=&quot;alert&quot;&gt;</span>
+<span class="x">    &lt;p&gt;Please choose one of the required fields.&lt;/p&gt;</span>
+<span class="x">&lt;/div&gt;</span>
+<span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>The expression <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">form.choice.errors</span> <span class="pre">}}</span></code> is inserted in both lines in
+<code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">block</span> <span class="pre">content</span> <span class="pre">%}</span></code> which define the radio buttons to be displayed on the page. See <a class="reference internal" href="#radio-ref"><span class="std std-ref">Radio buttons</span></a></p>
+</div>
+<div class="section" id="timer">
+<h5>Timer<a class="headerlink" href="#timer" title="Permalink to this headline">¶</a></h5>
+<p>This section also includes options to apply and, if necessary, show the timer indicating the remaining
+time on a given page. If a timeout is defined (on the page class), the display property can be specified
+under <code class="docutils literal notranslate"><span class="pre">.otree-timer</span></code> (e.g., “none” or “block”; click <a class="reference external" href="https://www.w3schools.com/cssref/pr_class_display.asp">here</a>
+for more information). Furthermore, it is possible to specify that the timer only appears if a certain
+amount of seconds remains before the next page is automatically displayed. Change the number in
+<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">(event.offset.totalSeconds</span> <span class="pre">===</span> <span class="pre">10)</span></code> according to your preferences.</p>
+<p>The remaining code in the block style section is about graphical specifications (see information on “class” below).</p>
+</div>
+</div>
+<div class="section" id="block-content">
+<span id="block-content-ref"></span><h4>Block Content<a class="headerlink" href="#block-content" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-django notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">...</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</div>
+<p>In this section, you define what is to be displayed to the user. The page is mostly made up of <code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code>
+elements which structure the page into divisions. Most such elements wrap around lower level elements
+together with a corresponding <code class="docutils literal notranslate"><span class="pre">&lt;/div&gt;</span></code> element to indicate which of the subsequent elements it should contain.
+<code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> elements can be given a “class” (e.g., “row”) to obtain a specific layout.
+Here is <a class="reference external" href="https://www.w3schools.com/cssref/sel_class.asp">further information</a> on how to customize them.
+Some contain a “style” property to align them without reference to a class (e.g., “style=”text-align: center””).</p>
+<p>In the html-files of the practice rounds, you can change the amounts of the displayed values
+for CO2, car miles, and bonus inside the <a class="reference internal" href="index.html#practice-page-ref"><span class="std std-ref">Practice Pages</span></a> class. In the files
+of the experimental rounds, these values will automatically be inserted via
+<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">player.carbon</span> <span class="pre">}}</span></code>, <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">player.car_miles</span> <span class="pre">}}</span></code> and <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">player.bonus|c</span> <span class="pre">}}</span></code>
+(<code class="docutils literal notranslate"><span class="pre">|c</span></code> indicates that this value will be presented in the currency specified in the settings file under
+<code class="docutils literal notranslate"><span class="pre">REAL_WORLD_CURRENCY_CODE</span></code>).</p>
+<div class="section" id="radio-buttons">
+<span id="radio-ref"></span><h5>Radio buttons<a class="headerlink" href="#radio-buttons" title="Permalink to this headline">¶</a></h5>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;Option A&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;choice&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span> {{ form.choice.errors }}
+</pre></div>
+</div>
+<p>This defines the radio button which is linked to the player’s <a class="reference internal" href="index.html#choice-ref"><span class="std std-ref">Choice</span></a> field. The <code class="docutils literal notranslate"><span class="pre">value</span></code> defines what
+is saved in the data if this button is chosen. The <code class="docutils literal notranslate"><span class="pre">id</span></code> attribute only serves as clarification in this case
+to explicitly show which value is chosen for which option above, since the code is somewhat difficult
+to oversee at first glance. (Generally, it could be styled in a similar way like the “class” attributes.)</p>
+</div>
+</div>
+</div>
+<span id="document-export"></span><div class="section" id="export">
+<span id="export-ref"></span><h3>Export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<p>How to export the data that is generated from the CET can be found <a class="reference external" href="https://otree.readthedocs.io/en/latest/admin.html#export-data">here</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Noel Strahm.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

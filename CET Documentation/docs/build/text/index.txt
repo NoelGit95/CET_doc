@@ -1,0 +1,113 @@
+Carbon Emission Task Documentation
+**********************************
+
+[image]
+
+
+Homepage
+========
+
+Carbon-Emission-task.ch
+
+
+About
+=====
+
+* The Carbon Emission Task (CET) as a new paradigm grounded in
+  experimental economics to assess actual pro-environmental behavior
+
+* The CET can be used in laboratory, online, or classroom studies.
+
+* Participants face repeated tradeoffs between financial bonus
+  opportunities paired with real carbon emissions and foregoing such
+  opportunities while staying carbon-neutral.
+
+
+Support
+=======
+
+For help, please contact someone@iop.unibe.ch
+
+
+Contents:
+=========
+
+* Set up the CET in oTree
+
+  * Step 1: Download the CET
+
+  * Step 2: Add the CET to your oTree Project
+
+  * Step 3: Change session configurations in settings.py
+
+* CET Data (csv file)
+
+* Constants
+
+  * Random Payoff
+
+  * Random Saved Emission
+
+  * Bot Criteria
+
+  * Num Rounds
+
+* Subsession Class
+
+  * creating_session()
+
+  * Paying Round
+
+  * Sum saved Emission
+
+  * All Players Finished
+
+  * Helpful prints
+
+  * Send Payment Mail
+
+* Player Class
+
+  * Fields
+
+  * Functions
+
+* Pages
+
+  * Instruction Page
+
+  * Practice Pages
+
+  * Experiment Page
+
+  * Results Page
+
+* Templates
+
+  * Instruction Page
+
+  * Practice Pages
+
+  * Experiment Page
+
+  * Results Page
+
+* Output
+
+  * Instruction Page
+
+  * Practice Pages
+
+  * Experiment Page
+
+  * Results Page
+
+
+Indices and tables
+******************
+
+* Index
+
+* Module Index
+
+* Search Page

@@ -1,0 +1,20 @@
+Templates
+*********
+
+Overview of all html templates of the Carbon Emission Task
+
+
+Instruction Page
+================
+
+
+Practice Pages
+==============
+
+
+Experiment Page
+===============
+
+
+Results Page
+============

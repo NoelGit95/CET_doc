@@ -1,0 +1,57 @@
+Constants
+*********
+
+The following Constants can be set in the Constants class:
+
+
+Random Payoff
+=============
+
+   * "random_payoff" is used to define your preferred payoff
+     calculation for the "player.payoff" field
+
+   * If set to "True" a player’s payoff is only calculated in the
+     "paying_round". The payoff in all other rounds is 0. See Paying
+     Round
+
+   * If set to "False" a player’s payoff is calculated in all rounds.
+
+
+Random Saved Emission
+=====================
+
+   * "random_saved_emission" is used to define how the
+     "Subsession.sum_saved_emission" field is calculated. See Sum
+     saved Emission
+
+   * If set to "True" the sum is calculated by adding each player’s
+     saved emission in the "paying_round"
+
+   * If set to "False" the saved emission for all rounds is added.
+
+
+Bot Criteria
+============
+
+   * "Bot_criteria" is used to define the criteria as to when a player
+     is seen as a bot.
+
+   * "Bot_criteria" must be a value between 0-1 that represents the
+     percentage of autonomous decisions a player has to make in order
+     to be seen as human.
+
+   * Example: The definition below means a player must decide
+     autonomously (No Timeout happened) in at least 75% of all rounds.
+     Otherwise the player is regarded as a bot.
+
+   Bot_criteria = 0.75
+
+
+Num Rounds
+==========
+
+   * This is an oTree specific variable that defines the number of
+     rounds of the CET.
+
+   * The number of rounds is defined as the length of the CET Data
+     (csv file) that contains the carbon data.
