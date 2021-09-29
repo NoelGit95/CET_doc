@@ -9,6 +9,6 @@ A Repo for the basic version of the Carbon Emission Task.
   and can be accessed [here](https://www.sciencedirect.com/science/article/pii/S0272494421000669).
   
 ## Read the Docs
-The repo also contains the doumentation of the CET's source-code. Check [CET Documentation](https://www.sciencedirect.com/science/article/pii/S0272494421000669) to see an
+The repo also contains the doumentation of the CET's source-code. Check [CET Documentation](https://cet-doc.readthedocs.io/en/latest/) to see an
 extensive overview of the code, as well as step-by-step instructions on how to set up the CET in your own oTree project.
 
