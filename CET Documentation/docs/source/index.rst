@@ -12,12 +12,13 @@ Carbon Emission Task Documentation
 
 
 
+
 About
 -------
 
-- The Carbon Emission Task (CET) as a new paradigm grounded in experimental economics to assess actual pro-environmental behavior.
+- The Carbon Emission Task (CET) is a new paradigm grounded in experimental economics to assess actual pro-environmental behavior.
 - The CET can be used in laboratory, online, or classroom studies.
-- Participants face repeated tradeoffs between financial bonus opportunities paired with real carbon emissions and foregoing such opportunities while staying carbon-neutral
+- Participants face repeated tradeoffs between financial bonus opportunities paired with real carbon emissions and foregoing such opportunities while staying carbon-neutral.
 - `Measuring pro-environmental behavior using the Carbon Emission Task
   <https://www.sciencedirect.com/science/article/pii/S0272494421000669>`_ (Berger & Wyss, 2021)
   was published in the *Journal of Environmental Psychology*.
