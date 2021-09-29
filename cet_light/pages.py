@@ -16,7 +16,7 @@ class Practice_page_1(Page):
 
     form_model = 'player'
     form_fields = ['choice_practice']
-    timeout_seconds = 20  # NOEL CHANGE
+    timeout_seconds = 20  
 
     def vars_for_template(self):
         return dict(
@@ -32,7 +32,7 @@ class Practice_page_2(Page):
 
     form_model = 'player'
     form_fields = ['choice_practice']
-    timeout_seconds = 20  # NOEL CHANGE
+    timeout_seconds = 20  
 
     def vars_for_template(self):
         return dict(
@@ -48,7 +48,7 @@ class Practice_page_3(Page):
 
     form_model = 'player'
     form_fields = ['choice_practice']
-    timeout_seconds = 20  # NOEL CHANGE
+    timeout_seconds = 20  
 
     def vars_for_template(self):
         return dict(
@@ -138,7 +138,7 @@ class Results(Page):
                                               "lbs",
                                               "Carbon Emission Task",
                                               "John Doe",
-                                              "noel.strahm@students.unibe.ch")
+                                              "john.doe@gmail.com")
 
 
 page_sequence = [Instruction_page,

@@ -10,12 +10,12 @@ from otree.api import (
 )
 import random
 import csv
-import smtplib  # Noel Change
-import requests  # Noel Change
-import traceback # Noel Change
+import smtplib  
+import requests  
+import traceback 
 
 
-author = 'db'
+author = 'Noel Strahm'
 
 doc = """
 Carbon Emission Task
@@ -31,8 +31,7 @@ class Constants(BaseConstants):
         questions = list(csv.DictReader(f, quoting=csv.QUOTE_NONNUMERIC))
 
     # DEFINE YOUR CONSTANTS HERE
-    #num_rounds = len(questions) #This is the actual one
-    num_rounds = 3  # NOEL CHANGE
+    num_rounds = len(questions)
     random_payoff = True
     random_saved_emission = False
     Bot_criteria = 0.75
@@ -115,13 +114,13 @@ class Subsession(BaseSubsession):
                           unit: str = "t",
                           experiment_name: str = "Carbon Emission Task",
                           payment_e_mail_name: str = "John Doe",
-                          payment_e_mail_to: list = ["noel.strahm@students.unibe.ch"]):
+                          payment_e_mail_to: list = ["john.doe@gmail.com"]):
 
         #CONSTANTS:
-        MAIL_USER = "d0d337e96041c7f2d952902f72af6557"
-        MAIL_PASS = "dc40f2b5a87c4c983b92a8ca8cfd674c"
-        MAIL_SERVER = "in-v3.mailjet.com"
-        MAIL_SENDER = "noel.strahm@iop.unibe.ch"
+        MAIL_USER = ""
+        MAIL_PASS = ""
+        MAIL_SERVER = ""
+        MAIL_SENDER = ""
         MAIL_PORT = 465
         DONATION_MINIMUM = 1    
 
